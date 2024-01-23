@@ -6,6 +6,7 @@
 <body>
 
 {% if isLoggedIn == True %}
+You are logged in as: {{ escape(current_user) }}<br>
 <a href="/logout">Log out</a>
 {% end %}
 
