@@ -10,4 +10,4 @@ quotes = [
 class Handler(tornado.web.RequestHandler):
     def get(self):
         q = random.choice(quotes)
-        self.render( "TemplateTest.html", quotation=q, isLoggedIn = True, current_user = "John Doe")
+        self.render("TemplateTest.html", quotation=q, isLoggedIn = True, current_user = "John Doe")

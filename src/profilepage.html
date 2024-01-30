@@ -8,10 +8,7 @@
 You are logged in as: {{ escape(name)}}<br>
 Your date of birth is: {{ escape(dateOfBirth)}}<br>
 Your email address is: {{ escape(email)}}<br>
-
-{% if isLoggedIn == True %}
-<a href="/">Log out</a>
-{% end %}
+<img src={{ escape(profilePic)}}><br>
 
 </body>
 </html>
