@@ -1,14 +1,43 @@
 <!DOCTYPE html>
+<style>
+#profile{
+    width: 100%;
+}
+#profile, th, td{
+    border: 3px solid;
+}
+.h1{
+    font-family: "Arial", "Helvetica", "Georgia";
+}
+.heading{
+    text-align: center;
+    width: auto;
+}
+</style>
 <html>
 <head>
     <title>Profile Page</title>
 </head>
 <body>
 
-You are logged in as: {{ escape(name)}}<br>
-Your date of birth is: {{ escape(dateOfBirth)}}<br>
-Your email address is: {{ escape(email)}}<br>
-<img src={{ escape(profilePic)}}><br>
+<div class="heading">
+    <h1>{{ escape(name)}}'s Profile Page</h1><br>
+</div>
+
+<table id="profile">
+    <tr>
+        <th>Full Name</th>
+        <th>Date of Birth</th>
+        <th>Email Address</th>
+        <th>Profile Picture</th>
+    </tr>
+    <tr>
+        <th>{{ escape(name)}}</th>
+        <th>{{ escape(dateOfBirth)}}</th>
+        <th>{{ escape(email)}}</th>
+        <th><img src={{ escape(profilePic)}}></th>
+    </tr>
+</table>
 
 </body>
 </html>
