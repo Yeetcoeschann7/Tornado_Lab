@@ -3,8 +3,9 @@
 #profile{
     width: 100%;
 }
-#profile, th, td{
+table, th, td{
     border: 3px solid;
+    border-collapse: collapse;
     font-family: "Arial", "Helvetica", "Georgia";
 }
 .heading{
@@ -31,12 +32,26 @@
         <th>Profile Picture</th>
     </tr>
     <tr>
-        <th>{{ escape(name)}}</th>
-        <th>{{ escape(dateOfBirth)}}</th>
-        <th>{{ escape(email)}}</th>
-        <th><img src={{ escape(profilePic)}}></th>
+        <th>{{escape(name)}}</th>
+        <th>{{escape(dateOfBirth)}}</th>
+        <th>{{escape(email)}}</th>
+        <th><img src={{escape(profilePic)}}></th>
     </tr>
 </table>
+
+<br><br>
+
+<input type="hidden" value="{{user}}" id="uname">
+
+<table id="updateprofile" style="border: 0cm">
+    <tr><th style="border: 0cm">Update {{user}}'s Profile: <br><br></th></tr>
+    <tr><td style="border: 0cm">Full Name: <td style="border: 0cm"><input id="fname">
+    <tr><td style="border: 0cm">Email: <td style="border: 0cm"><input id="email">
+    <tr><td style="border: 0cm">Profile pic: <td style="border: 0cm"><input id="ppic"  type="file">
+    <tr><td style="border: 0cm"><button onclick="submit()">Submit</button></td></tr>
+    </table>
+    
+    <script src="/static/updateprofile.js"></script>
 
 </body>
 </html>
